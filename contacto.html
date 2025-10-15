@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantera Rosa</title>
+    <style>
+        .contenedor {
+            width:80% ;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 3px solid #757373;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cabecera {
+            background-color: #333;
+            color:#f7f7f7;
+            padding:20px;
+            text-align: center;
+        }
+        .contenido {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .columna-izquierda {
+            margin: 5px auto;
+            width: 60%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #a17474;
+        }
+        .columna-derecha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #e0d9d9;
+        }
+        .pie-de-pagina {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+        .texto {
+            text-align: center;
+        }
+        .video1 {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+        .boton {
+            background-color: #fdc2ff;
+            color: #252525;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .boton:hover {
+            background-color: #7a0349;
+            color: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabecera">
+            <table width="100%" style="padding: 10px; border: 1px solid #dbdfd5;">
+                <tr>
+                    <th><img src="../Material/PanteraRosa.png" width="20%" ></th>
+                    <th><h1>La Pantera Rosa</h1></th>
+                    <th><img src="../Material/PanteraRosa.png" width="20%" ></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <nav>
+                            <a href="index.html"class="boton">Inicio</a>
+                            <a href="personajes.html"class="boton">Personajes</a>
+                            <a href="contacto.html"class="boton">Contacto</a>
+                        </nav>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>    
+        </div>
+        <div class="contenido">
+            <form>
+                <h2>Formulario de Contacto</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="pie-de-pagina">
+            <p>&copy; 2025 Diseño C. Freinet Educativo</p>
+        </div>
+    </div>        
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripcion</title>
+    <style>
+        .contenedor {
+            width:80% ;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 3px solid #757373;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cabecera {
+            background-color: #333;
+            color:#f7f7f7;
+            padding:20px;
+            text-align: center;
+        }
+        .contenido {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 5px auto;
+            border: 3px solid #757373;
+
+        }
+        .pie-de-pagina {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+        .texto {
+            text-align: center;
+        }
+        .BDib {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .BText {
+            width: 40%;
+            font-size: 20px;
+        }
+        .boton {
+            background-color: #fdc2ff;
+            color: #252525;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .boton:hover {
+            background-color: #7a0349;
+            color: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabecera">
+            <table width="100%" style="padding: 10px; border: 1px solid #dbdfd5;">
+                <tr>
+                    <th><img src="../Material/PanteraRosa.png" width="20%" ></th>
+                    <th><h1>La Pantera Rosa</h1></th>
+                    <th><img src="../Material/PanteraRosa.png" width="20%" ></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <nav>
+                            <a href="index.html" class="boton">Inicio</a>
+                            <a href="personajes.html" class="boton">Personajes</a>
+                            <a href="contacto.html" class="boton">Contacto</a>
+                        </nav>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>    
+        </div>
+        <div class="contenido">
+            <h1 id="titulo"></h1>
+            <div class="BDib" id="contenedores"></div>
+            <p class="DText" id="descripcion"></p>
+            <script>
+                const urlParams=new URLSearchParams(window.location.search);
+                const imagen=urlParams.get('imagen');
+                const imagenes=document.createElement('img');
+
+                switch (imagen) {
+                    case '1':
+                        document.getElementById('titulo').innerHTML="La Pantera Rosa";
+                        imagenes.src='../Material/panterarosada.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='Es el nombre de un personaje de ficción, relacionado con la película de igual título, de 1963.'
+                        break;
+                    case '2':
+                        document.getElementById('titulo').innerHTML="El Oso Hormiguero";
+                        imagenes.src='../Material/osohormiguero.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='Es un personaje ficticio creado por el animador Friz Freleng obsesionado por atrapar y comer a una hormiga roja llamada Charlie. Hizo su primera aparición en 1969.'
+                        break;
+                    case '3':
+                        document.getElementById('titulo').innerHTML="La Hormiga";
+                        imagenes.src='../Material/hormiga.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='Es un personaje ficticio que aparece en la serie de dibujos animados "La hormiga y el oso hormiguero" (The Ant and the Aardvark), donde suele ser el blanco de los intentos de captura por parte del oso hormiguero azul.'
+                        break;
+                    case '4':
+                        document.getElementById('titulo').innerHTML="El Inspector";
+                        imagenes.src='../Material/inspector.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='El inspector Jacques Clouseau ( Francés: [ʒɑk kluzo] ), a quien posteriormente se le otorgó el rango de Inspector Jefe , es un personaje ficticio de la serie cómica La Pantera Rosa de Blake Edwards.'
+                        break;
+                    case '5':
+                        document.getElementById('titulo').innerHTML="El Mosquito Dragon";
+                        imagenes.src='../Material/mosquitodragon.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='El "mosquito dragon" es un insecto que aterroriza a Crane en varias de sus aventuras.'
+                        break;
+                    case '6':
+                        document.getElementById('titulo').innerHTML="El caballo";
+                        imagenes.src='../Material/caballo.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='Es un personaje con el que se identifica a través de su representación como el compañero equino de la pantera'
+                        break;
+                    case '7':
+                        document.getElementById('titulo').innerHTML="Piernas Locas Crane";
+                        imagenes.src='../Material/piernaslocascrane.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='Es una grulla amarilla de poca inteligencia, busca sin éxito atrapar una libélula junto a su hijo, Crane, Jr.'
+                        break;
+                    case '8':
+                        document.getElementById('titulo').innerHTML="El Sherift";
+                        imagenes.src='../Material/sherift.png';
+                        imagenes.alt='Imagen';
+                        imagenes.style.width='150px';
+                        imagenes.style.objectFit='contain';
+                        document.getElementById('contenedores').appendChild(imagenes);
+                        document.getElementById('descripcion').innerHTML='Es un personaje secundario de la serie animada, es pequeño, de mal genio y tiene un caballo llamado Fester, al que él solo llama "Caballo".'
+                        break;
+                    default:
+                        document.getElementById('titulo').innerHTML="Titulo no encontrado";
+                        document.getElementById('descripcion').innerHTML='Descripcion no encontrada'
+                        break;
+                }
+
+            </script>
+        </div>
+        <div class="pie-de-pagina">
+            <p>&copy; 2025 Diseño C. Freinet Educativo</p>
+        </div>
+    </div>        
+</body>
+</html>

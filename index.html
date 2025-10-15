@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantera Rosa</title>
+    <style>
+        .contenedor {
+            width:80% ;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 3px solid #757373;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .cabecera {
+            background-color: #333;
+            color:#f7f7f7;
+            padding:20px;
+            text-align: center;
+        }
+        .contenido {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+        .columna-izquierda {
+            margin: 5px auto;
+            width: 60%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #a17474;
+        }
+        .columna-derecha {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #e0d9d9;
+        }
+        .pie-de-pagina {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            clear: both;
+        }
+        .texto {
+            text-align: center;
+        }
+        .video1 {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+        .boton {
+            background-color: #fdc2ff;
+            color: #252525;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .boton:hover {
+            background-color: #7a0349;
+            color: #f7f7f7;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabecera">
+            <table width="100%" style="padding: 10px; border: 1px solid #dbdfd5;">
+                <tr>
+                    <th><img src="../Material/PanteraRosa.png" width="20%" ></th>
+                    <th><h1>La Pantera Rosa</h1></th>
+                    <th><img src="../Material/PanteraRosa.png" width="20%" ></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <nav>
+                            <a href="index.html"class="boton">Inicio</a>
+                            <a href="personajes.html"class="boton">Personajes</a>
+                            <a href="contacto.html"class="boton">Contacto</a>
+                        </nav>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>    
+        </div>
+        <div class="contenido">
+            <div class="columna-izquierda">
+                <h2>Orígenes de la Pantera Rosa animada</h2>
+                <p class="Pa1">La historia de La Pantera Rosa animada comenzó con los créditos de la película de 1963 "La Pantera Rosa", donde el personaje se creó para representar un diamante valioso del mismo nombre. El éxito del personaje en los títulos de apertura llevó a la creación de su propio cortometraje piloto, "The Pink Phink", que ganó un premio de la Academia, dando lugar a una exitosa serie de dibujos animados que se convirtió en un ícono cultural.</p>
+                <table width="100%" style="padding: 10px; border: 1px solid #90928c;">
+                    <tr>
+                        <th><h4>Intro de la Pantera Rosa</h4></th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <audio id="IntroPRosa" autoplay controls>
+                                <source src="../Material/IntroPRosa.mp3" type="audio/mp3">
+                                Tu navegador no soporta el audio.
+                            </audio>
+                        </td>
+                    </tr>
+                </table>           
+            </div>
+            <div class="columna-derecha">
+                <table>
+                    <tr>
+                        <th><h2>Video de la Pantera Rosa.</h2></th>
+                    </tr>
+                    <tr>
+                        <td><video class="video1" src="../Material/2v.mp4" controls autoplay poster="../Material/cine.png" width="100%"></video></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="pie-de-pagina">
+            <p>&copy; 2025 Diseño C. Freinet Educativo</p>
+        </div>
+    </div>        
+</body>
+</html>
