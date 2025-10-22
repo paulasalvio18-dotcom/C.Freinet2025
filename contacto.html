@@ -1,0 +1,187 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <style>
+        .contenedor {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #f7f7f7;
+        border: 3px solid #757373;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cabecera {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;   
+        text-align: center;            
+        }
+        
+        .contenido {                          
+            border: 3px solid #7a0349;             
+        }       
+       
+        .pie-de-pagina {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        clear: both;
+        }
+
+        
+      /* Estilos para la navegación */
+      nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+      }
+      
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 5px;
+      }
+      
+      nav a:hover {
+        color: #88c714;
+      }  
+      
+      .Pa1 {
+        text-align: justify;
+      }
+
+    .boton {
+                    background-color: #fdc2ff; /* color de fondo */
+                    color: #252525; /* color del texto */
+                    padding: 5px 5px; /* espaciado interno */
+                    border: none; /* sin borde */
+                    border-radius: 5px; /* bordes redondeados */
+                    cursor: pointer; /* cursor de mano */
+                    text-decoration: none; /* sin subrayado */
+                    font-size: 20px; /* tamaño de fuente */
+                    }
+
+    .boton:hover     {
+            background-color: #7a0349; /* color de fondo al pasar el mouse */
+            color: #f7f7f7;
+            }
+
+    body { 
+      font-family: Arial, sans-serif; 
+      background: #f4f4f4; 
+      margin: 0; 
+      padding: 0; 
+      }
+
+    .container { 
+      max-width: 400px; 
+      margin: 40px auto; 
+      background: #fff; 
+      padding: 30px 40px; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        }
+      
+      h2 { 
+        text-align: center; 
+        color: #333; 
+        }
+            
+      label { 
+        display: block;  
+        margin-top: 15px; 
+        color: #555; 
+        }
+        
+      input, textarea { 
+        width: 100%; 
+        padding: 10px; 
+        margin-top: 5px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+        }
+            
+        button { 
+          margin-top: 20px; 
+          width: 100%; 
+          padding: 12px; 
+          background: #f1b8e0; 
+          color: #0a0a0a; 
+          border: none; 
+          border-radius: 4px; 
+          font-size: 16px; 
+          cursor: pointer; 
+          }
+          
+          button:hover { 
+          background: #c002c0; 
+          color: #f7f5f5;
+          }
+    
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="cabecera">
+            <table width="100%" style="padding: 10px;border: 1px solid #dbdfd5;">
+                <tr>
+                  <th><img src="Material/PanteraRosa.png" width="20%"></th>
+                  <th><h1>La Pantera Rosa</h1></th>
+                  <th><img src="Material/PanteraRosa.png" width="20%"></th>
+                </tr>
+                <tr>
+                  <td></td>    
+                  <td>
+                    <nav>
+                        <a href="index.html" class="boton">Inico</a>                   
+                        <a href="personajes.html" class="boton">Personajes</a>
+                        <a href="contacto.html" class="boton">Contacto</a>                       
+                    </nav>
+                  </td>
+                  <td></td>
+                </tr>                
+            </table>            
+        </div>
+        <div class="contenido">         
+                           
+                <div class="container">
+                  <h2>Contacto</h2>
+                  <form id="contact-form">
+                      <label for="name">Nombre:</label>
+                      <input type="text" id="name" name="name" required>
+                      <label for="email">Correo electrónico:</label>
+                      <input type="email" id="email" name="email" required>
+                      <label for="message">Mensaje:</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                      <button type="submit">Enviar</button>
+                  </form>
+                </div>
+
+    <!-- EmailJS SDK -->
+              <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+              <script>
+              (function(){
+                  emailjs.init('qkVrlryZlqJQv-Jg4'); // Reemplaza TU_PUBLIC_KEY por tu clave pública de EmailJS
+              })();
+              document.getElementById('contact-form').addEventListener('submit', function(event) {
+                  event.preventDefault();
+                  emailjs.sendForm('service_oke7xlj', 'template_0dqxzuq', this) // Service ID, Template ID
+                      .then(function() {
+                          alert('Correo enviado con éxito');
+                      }, function(error) {
+                          alert('Error al enviar el correo: ' + JSON.stringify(error));
+                      });
+              });
+              </script>
+              
+        <div class="pie-de-pagina">
+            <p>&copy; 2025 Diseño C. Freinet Educativo</p>
+        </div>
+    </div>        
+</body>
+</html>
